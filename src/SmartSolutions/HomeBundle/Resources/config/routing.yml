@@ -1,0 +1,3 @@
+smart_solutions_home_homepage:
+    path:     /
+    defaults: { _controller: SmartSolutionsHomeBundle:Default:index }

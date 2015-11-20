@@ -1,0 +1,22 @@
+SmartSolutions\AdmistradorBundle\Entity\Pension:
+    type: entity
+    table: pension
+    repositoryClass: SmartSolutions\AdmistradorBundle\Entity\PensionRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    oneToMany:
+        users:
+            targetEntity: Users
+            mappedBy: pension
+    fields:
+        nombre:
+            type: string
+            length: 255
+        telefono:
+            type: string
+            length: '20'
+    lifecycleCallbacks: {  }

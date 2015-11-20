@@ -1,0 +1,50 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Empleados / Usuarios</h1> 
+    <a href="{{ path('users_new') }}" class="btn btn-danger">Nuevo Empleado</a>
+
+    <table class="bordered-table responsive-table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Username</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Telefono</th>
+                <th>Rol</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('users_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.username }}</td>
+                <td>{{ entity.nombre }}</td>
+                <td>{{ entity.apellido }}</td>
+                <td>{{ entity.email }}</td>
+                <td>{{ entity.telefono }}</td>
+                <td>
+                    {% for rol in entity.grupo %}
+                        {{ rol.nombre }}
+                    {% endfor %}
+                </td>
+                <td>
+                    <a href="{{ path('users_edit', { 'id': entity.id }) }}"><i class="medium material-icons">spellcheck</i></a>
+                    {% if entity.isActive %}
+                        <a href="{{ path('users_state', { 'id': entity.id , 'state' : entity.isActive }) }}">
+                        <i class="medium material-icons lock_open">lock_open</i></a>
+                    {% else %}
+                        <a href="{{ path('users_state', { 'id': entity.id , 'state' : 'entity.isActive' }) }}">
+                            <i class="medium material-icons lock_outline">lock_outline</i>
+                        </a>
+                    {% endif %}
+                    <a href="{{ path('users_delete', { 'id': entity.id }) }}" title="Editar"><i class="medium material-icons">delete</i></a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endblock %}

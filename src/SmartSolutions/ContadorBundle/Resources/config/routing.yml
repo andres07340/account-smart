@@ -1,0 +1,7 @@
+smart_solutions_contador_cuentastransacion:
+    resource: "@SmartSolutionsContadorBundle/Resources/config/routing/cuentastransacion.yml"
+    prefix:   /cuentastransacion
+
+smart_solutions_contador_homepage:
+    path:     /homeContador
+    defaults: { _controller: SmartSolutionsContadorBundle:Default:index }

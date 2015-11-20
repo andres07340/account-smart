@@ -1,0 +1,21 @@
+SmartSolutions\ContadorBundle\Entity\Documento:
+    type: entity
+    table: null
+    repositoryClass: SmartSolutions\ContadorBundle\Entity\DocumentoRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    oneToMany:
+        transaciones:
+            targetEntity: Transaccion
+            mappedBy: Documento
+    fields:
+        descripcion:
+            type: string
+            length: '100'
+        fecha:
+            type: datetime
+    lifecycleCallbacks: {  }

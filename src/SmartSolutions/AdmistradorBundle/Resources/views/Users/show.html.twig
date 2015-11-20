@@ -1,0 +1,59 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Users</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Username</th>
+                <td>{{ entity.username }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ entity.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Apellido</th>
+                <td>{{ entity.apellido }}</td>
+            </tr>
+            <tr>
+                <th>Numdocumento</th>
+                <td>{{ entity.numDocumento }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ entity.email }}</td>
+            </tr>
+            <tr>
+                <th>Telefono</th>
+                <td>{{ entity.telefono }}</td>
+            </tr>
+            <tr>
+                <th>Salario basico</th>
+                <td>{{ entity.salarioBasico }}</td>
+            </tr>
+            <tr>
+                <th>Entidad de servicio de salud: </th>
+                <td>{{ entity.eps.nombre }}</td>
+            </tr>
+
+            <tr>
+                <th>Entidad de ARL y Pension: </th>
+                <td>{{ entity.pension.nombre }}</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <a class="btn btn-info" href="{{ path('users') }}">
+            Atras
+        </a>
+    <a class="btn btn-success" href="{{ path('users_edit', { 'id': entity.id }) }}">
+            Editar
+        </a>
+    {{ form(delete_form) }}
+{% endblock %}

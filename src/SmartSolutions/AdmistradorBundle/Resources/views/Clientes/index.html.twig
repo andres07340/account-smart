@@ -1,0 +1,49 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Lista de Productos</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id Producto</th>
+                <th>Codigo Producto</th>
+                <th>Nombre</th>
+                <th>Version</th>
+                <th>Precio</th>
+                <th>Descripcion</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('clientes_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.numDocumento }}</td>
+                <td>{{ entity.nombre }}</td>
+                <td>{{ entity.apellido }}</td>
+               <td>{{ entity.telefono }}</td>
+                <td>{{ entity.direccion }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('clientes_show', { 'id': entity.id }) }}">Seleccionar</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('clientes_edit', { 'id': entity.id }) }}">Editar</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('clientes_new') }}">
+                Crear nuevo Producto
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

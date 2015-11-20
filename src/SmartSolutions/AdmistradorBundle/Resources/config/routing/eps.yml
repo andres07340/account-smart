@@ -1,0 +1,30 @@
+eps:
+    path:     /
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Eps:index" }
+
+eps_show:
+    path:     /{id}/show
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Eps:show" }
+
+eps_new:
+    path:     /new
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Eps:new" }
+
+eps_create:
+    path:     /create
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Eps:create" }
+    methods:  POST
+
+eps_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Eps:edit" }
+
+eps_update:
+    path:     /{id}/update
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Eps:update" }
+    methods:  [POST, PUT]
+
+eps_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Eps:delete" }
+    methods:  [POST, DELETE]

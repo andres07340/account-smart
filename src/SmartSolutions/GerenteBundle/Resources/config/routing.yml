@@ -1,0 +1,3 @@
+smart_solutions_gerente_homepage:
+    path:     /homeGerente
+    defaults: { _controller: SmartSolutionsGerenteBundle:Default:index }

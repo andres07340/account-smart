@@ -1,0 +1,3 @@
+smart_solutions_vendedor_homepage:
+    path:     /homeVendedor
+    defaults: { _controller: SmartSolutionsVendedorBundle:Default:index }

@@ -1,0 +1,22 @@
+SmartSolutions\AdmistradorBundle\Entity\Grupo:
+    type: entity
+    table: null
+    repositoryClass: SmartSolutions\AdmistradorBundle\Entity\GrupoRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    oneToMany:
+        users:
+            targetEntity: Users
+            mappedBy: grupo
+    fields:
+        nombre:
+            type: string
+            length: 255
+        role:
+            type: string
+            length: '20'
+    lifecycleCallbacks: {  }

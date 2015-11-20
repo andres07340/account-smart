@@ -1,0 +1,30 @@
+cuentastransacion:
+    path:     /
+    defaults: { _controller: "SmartSolutionsContadorBundle:CuentasTransacion:index" }
+
+cuentastransacion_show:
+    path:     /{id}/show
+    defaults: { _controller: "SmartSolutionsContadorBundle:CuentasTransacion:show" }
+
+cuentastransacion_new:
+    path:     /new
+    defaults: { _controller: "SmartSolutionsContadorBundle:CuentasTransacion:new" }
+
+cuentastransacion_create:
+    path:     /create
+    defaults: { _controller: "SmartSolutionsContadorBundle:CuentasTransacion:create" }
+    methods:  POST
+
+cuentastransacion_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SmartSolutionsContadorBundle:CuentasTransacion:edit" }
+
+cuentastransacion_update:
+    path:     /{id}/update
+    defaults: { _controller: "SmartSolutionsContadorBundle:CuentasTransacion:update" }
+    methods:  [POST, PUT]
+
+cuentastransacion_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SmartSolutionsContadorBundle:CuentasTransacion:delete" }
+    methods:  [POST, DELETE]

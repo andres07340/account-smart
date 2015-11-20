@@ -1,0 +1,28 @@
+SmartSolutions\AdmistradorBundle\Entity\Clientes:
+    type: entity
+    table: null
+    repositoryClass: SmartSolutions\AdmistradorBundle\Entity\ClientesRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        numDocumento:
+            type: string
+            length: '50'
+            column: num_documento
+        nombre:
+            type: string
+            length: '50'
+        apellido:
+            type: string
+            length: '50'
+        telefono:
+            type: string
+            length: '20'
+        direccion:
+            type: string
+            length: '100'
+    lifecycleCallbacks: {  }

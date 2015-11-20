@@ -1,0 +1,25 @@
+SmartSolutions\ContadorBundle\Entity\CuentasTransacion:
+    type: entity
+    table: null
+    repositoryClass: SmartSolutions\ContadorBundle\Entity\CuentasTransacionRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    oneToMany:
+        transacion:
+            targetEntity: CuentasTransacion
+            mappedBy: Documento
+    fields:
+        codigo:
+            type: string
+            length: '11'
+        descripcion:
+            type: string
+            length: '100'
+        tipo:
+            type: string
+            length: '20'
+    lifecycleCallbacks: {  }

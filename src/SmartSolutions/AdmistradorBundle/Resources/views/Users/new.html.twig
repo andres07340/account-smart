@@ -1,0 +1,70 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <div class="col s12 m8 l6">
+    	<h1>Editar Empleado</h1>
+	    {{ form_start(form) }}
+		    {{ form_errors(form) }}
+		 	    <div class="input-field col s12 m12 l6">
+		 	    	{{ form_row(form.username) }}
+			    </div>
+			    <div class="input-field col s12 m12 l6">
+		    	{{ form_row(form.password) }}
+		 		</div>
+			    <div class="input-field col s12 m12 l6">
+			    {{ form_row(form.nombre) }}
+			    </div>
+			    <div class="input-field col s12 m12 l6">
+			    {{ form_row(form.apellido) }}
+			    </div>
+			    <div class="input-field col s12 m12 l6">
+			    {{ form_row(form.numDocumento) }}
+			    </div>
+			    <div class="input-field col s12 m12 l6">
+			    {{ form_row(form.email) }}
+			    </div>
+			    <div class="input-field col s12 m12 l6">
+			    {{ form_row(form.telefono) }}
+			    </div>
+			    <div class="input-field col s12 m12 l6">
+			    {{ form_row(form.salarioBasico) }}
+			    </div>
+			    <div class="input-field col s2 m3 l2">
+			    	{{ form_label(form.grupo) }}
+			    </div>
+			    <div class="input-field col s10 m9 l10">
+			    {{ form_widget(form.grupo) }}
+			    </div>
+			    <div class="input-field col s2 m3 l2">
+			    	{{ form_label(form.eps) }}
+			    </div>
+			    <div class="input-field col s10 m9 l10">
+			    {{ form_widget(form.eps) }}
+			    </div>
+			    <div class="input-field col s2 m3 l2">
+			    	{{ form_label(form.pension) }}
+			    </div>
+			    <div class="input-field col s10 m9 l10">
+			    	{{ form_widget(form.pension) }}
+			    </div>
+			    <p class="input-field col s2 m3 l2">
+			    Estado
+			    </p>
+			    <p class="input-field col s10 m9 l10">
+			    <div class="switch">
+			    	<label>
+				    	Off
+				      	{{ form_widget(form.isactive) }}
+				      	<span class="lever"></span>
+				      	On
+			    	</label>
+			    </div>
+		 		</p>
+		 		
+		{{ form_end(form) }}
+    </div>
+    
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    	 <a href="{{ path('users') }}" >Atras</a>
+    </div>
+{% endblock %}

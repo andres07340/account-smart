@@ -1,0 +1,34 @@
+proveedor:
+    path:     /
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Proveedor:index" }
+
+proveedor_show:
+    path:     /{id}/show
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Proveedor:show" }
+
+proveedor_new:
+    path:     /new
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Proveedor:new" }
+
+proveedor_create:
+    path:     /create
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Proveedor:create" }
+    methods:  POST
+
+proveedor_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Proveedor:edit" }
+
+proveedor_update:
+    path:     /{id}/update
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Proveedor:update" }
+    methods:  [POST, PUT]
+
+proveedor_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Proveedor:delete" }
+    methods:  [POST, DELETE]
+
+proveedor_state:
+    path:     /{id}/{state}/state
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Proveedor:updateState" }

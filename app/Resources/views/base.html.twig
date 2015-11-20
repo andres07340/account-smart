@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}REDES CAC{% endblock %}</title>
+    {% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/materialize.css ') }}"  media="screen,projection">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    {% block javascripts %}
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="{{ asset('home/js/materialize.js') }}" type="text/javascript" charset="utf-8" async defer></script>
+    <script src="{{ asset('home/js/init.js') }}"></script>
+    {% endblock %}
+</head>
+<body>
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#">Mi Perfil</a></li>
+        <li><a href="{{ path('logout') }}">Salir</a></li>
+    </ul>
+
+    <ul id="dropdown2" class="dropdown-content">
+        <li><a href="#">Mi Perfil</a></li>
+        <li><a href="{{ path('logout') }}">Salir</a></li>
+    </ul>
+    {% block menu %}
+
+    <nav role="navigation">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">Redes CAC</a>
+            <ul class="right hide-on-med-and-down">
+                
+                <li><a href="{{ path('clientes') }}">Nuestros Productos</a></li>
+                
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">
+                    <i class="material-icons lock_open left">person_pin</i>{{ app.user.username }}
+                    <i class="material-icons right"></i>
+                    </a>
+                </li>
+            </ul>
+ 
+            <ul id="nav-mobile" class="side-nav">
+                <li><a href="{{ path('users') }}">Empleados</a></li>
+                <li><a href="{{ path('eps') }}">EPS</a></li>
+                <li><a href="{{ path('pension') }}">Pension</a></li>
+                <li><a href="{{ path('clientes') }}">Clientes</a></li>
+                <li><a href="{{ path('proveedor') }}">Proveedores</a></li>
+                <li><a href="{{ path('cuentastransacion') }}">Cuentas transaccion</a></li>
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown2">
+                    <i class="material-icons lock_open left">person_pin</i>{{ app.user.username }}
+                    <i class="material-icons right"></i>
+                    </a>
+                </li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+
+{% endblock %}
+<div class="container">
+    <div class="row">
+        {% block body %}{% endblock %}
+    </div>
+</div>
+{% block footer %}
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        
+    </div>
+    <div class="col l4 offset-l2 s12">
+       
+        <ul>
+       
+      </ul>
+  </div>
+</div>
+</div>
+<div class="footer-copyright">
+    <div class="container">
+        © 2015 Copyright Todos los derechos reservados
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+    </div>
+</div>
+</footer>
+
+{% endblock %}
+</body>
+</html>

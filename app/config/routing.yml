@@ -1,0 +1,31 @@
+smart_solutions_vendedor:
+    resource: "@SmartSolutionsVendedorBundle/Resources/config/routing.yml"
+    prefix:   /
+
+smart_solutions_gerente:
+    resource: "@SmartSolutionsGerenteBundle/Resources/config/routing.yml"
+    prefix:   /
+
+smart_solutions_contador:
+    resource: "@SmartSolutionsContadorBundle/Resources/config/routing.yml"
+    prefix:   /
+
+smart_solutions_home:
+    resource: "@SmartSolutionsHomeBundle/Resources/config/routing.yml"
+    prefix:   /
+
+smart_solutions_admistrador:
+    resource: "@SmartSolutionsAdmistradorBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+logout:
+    path:   /logout
+login:
+    path:     /login
+    defaults: { _controller: SmartSolutionsAdmistradorBundle:Default:login }
+login_check:
+    path:     /login_check
+    defaults: { _controller: SmartSolutionsAdmistradorBundle:Default:loginCheck }

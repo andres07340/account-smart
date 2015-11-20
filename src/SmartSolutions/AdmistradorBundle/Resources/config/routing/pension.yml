@@ -1,0 +1,30 @@
+pension:
+    path:     /
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Pension:index" }
+
+pension_show:
+    path:     /{id}/show
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Pension:show" }
+
+pension_new:
+    path:     /new
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Pension:new" }
+
+pension_create:
+    path:     /create
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Pension:create" }
+    methods:  POST
+
+pension_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Pension:edit" }
+
+pension_update:
+    path:     /{id}/update
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Pension:update" }
+    methods:  [POST, PUT]
+
+pension_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Pension:delete" }
+    methods:  [POST, DELETE]

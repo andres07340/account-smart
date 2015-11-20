@@ -1,0 +1,30 @@
+clientes:
+    path:     /
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Clientes:index" }
+
+clientes_show:
+    path:     /{id}/show
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Clientes:show" }
+
+clientes_new:
+    path:     /new
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Clientes:new" }
+
+clientes_create:
+    path:     /create
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Clientes:create" }
+    methods:  POST
+
+clientes_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Clientes:edit" }
+
+clientes_update:
+    path:     /{id}/update
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Clientes:update" }
+    methods:  [POST, PUT]
+
+clientes_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Clientes:delete" }
+    methods:  [POST, DELETE]

@@ -1,0 +1,33 @@
+users:
+    path:     /
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Users:index" }
+
+users_show:
+    path:     /{id}/show
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Users:show" }
+
+users_new:
+    path:     /new
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Users:new" }
+
+users_create:
+    path:     /create
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Users:create" }
+    methods:  POST
+
+users_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Users:edit" }
+
+users_update:
+    path:     /{id}/update
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Users:update" }
+    methods:  [POST, PUT]
+
+users_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Users:delete" }
+    methods:  [POST, DELETE]
+users_state:
+    path:     /{id}/{state}/state
+    defaults: { _controller: "SmartSolutionsAdmistradorBundle:Users:updateState" }

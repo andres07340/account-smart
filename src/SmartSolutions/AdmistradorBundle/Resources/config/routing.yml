@@ -1,0 +1,23 @@
+smart_solutions_admistrador_proveedor:
+    resource: "@SmartSolutionsAdmistradorBundle/Resources/config/routing/proveedor.yml"
+    prefix:   /proveedor
+
+smart_solutions_admistrador_pension:
+    resource: "@SmartSolutionsAdmistradorBundle/Resources/config/routing/pension.yml"
+    prefix:   /pension
+
+smart_solutions_admistrador_eps:
+    resource: "@SmartSolutionsAdmistradorBundle/Resources/config/routing/eps.yml"
+    prefix:   /eps
+
+smart_solutions_admistrador_clientes:
+    resource: "@SmartSolutionsAdmistradorBundle/Resources/config/routing/clientes.yml"
+    prefix:   /clientes
+
+smart_solutions_admistrador_users:
+    resource: "@SmartSolutionsAdmistradorBundle/Resources/config/routing/users.yml"
+    prefix:   /users
+
+smart_solutions_admistrador_homepage:
+    path:     /homeAdmin
+    defaults: { _controller: SmartSolutionsAdmistradorBundle:Default:index }

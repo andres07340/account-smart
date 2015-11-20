@@ -1,0 +1,22 @@
+SmartSolutions\AdmistradorBundle\Entity\Eps:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    oneToMany:
+        users:
+            targetEntity: Users
+            mappedBy: eps
+    fields:
+        nombre:
+            type: string
+            length: '100'
+        telefono:
+            type: string
+            length: '20'
+        
+    lifecycleCallbacks: {  }

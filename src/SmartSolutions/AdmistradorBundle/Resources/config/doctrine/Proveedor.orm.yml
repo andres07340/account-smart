@@ -1,0 +1,28 @@
+SmartSolutions\AdmistradorBundle\Entity\Proveedor:
+    type: entity
+    table: null
+    repositoryClass: SmartSolutions\AdmistradorBundle\Entity\ProveedorRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        razonSocial:
+            type: string
+            length: 255
+            column: razon_social
+        representante:
+            type: string
+            length: 255
+        telefono:
+            type: string
+            length: '20'
+        email:
+            type: string
+            length: '50'
+        isActive:
+            type: boolean
+            column: is_active
+    lifecycleCallbacks: {  }

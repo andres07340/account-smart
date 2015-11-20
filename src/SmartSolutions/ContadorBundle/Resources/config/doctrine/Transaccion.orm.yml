@@ -1,0 +1,36 @@
+SmartSolutions\ContadorBundle\Entity\Transaccion:
+    type: entity
+    table: null
+    repositoryClass: SmartSolutions\ContadorBundle\Entity\TransaccionRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    manyToOne:
+        cuenta:
+            targetEntity: CuentasTransacion
+            inversedBy: Transaccion
+            joinColumn:
+                name: id_cuenta
+                referencedColumnName: id
+        documento:
+            targetEntity: documento
+            inversedBy: Transaccion
+            joinColumn:
+                name: id_documento
+                referencedColumnName: id
+        
+    fields:
+        fecha:
+            type: datetime
+        naturaleza:
+            type: string
+            length: '1'
+        descripcion:
+            type: string
+            length: '100'
+        valor:
+            type: integer
+    lifecycleCallbacks: {  }

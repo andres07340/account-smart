@@ -1,0 +1,4 @@
+services:
+#    smart_solutions_vendedor.example:
+#        class: SmartSolutions\VendedorBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

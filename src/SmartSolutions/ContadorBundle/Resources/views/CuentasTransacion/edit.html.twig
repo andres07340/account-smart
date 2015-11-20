@@ -1,0 +1,22 @@
+{% set menu = '::base.html.twig' %}
+{% for rol in app.user.getRoles()  %}
+    {% if rol == 'role_contador' %}
+    {% set menu = '::Contador.html.twig' %}
+{% endif %}
+{% endfor %}
+{% extends menu %}
+
+{% block body -%}
+    <h1>CuentasTransacion edit</h1>
+
+    {{ form(edit_form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('cuentastransacion') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

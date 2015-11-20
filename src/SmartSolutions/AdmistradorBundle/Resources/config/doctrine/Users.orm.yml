@@ -1,0 +1,61 @@
+SmartSolutions\AdmistradorBundle\Entity\Users:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    manyToOne:
+        eps:
+            targetEntity: Eps
+            inversedBy: users
+            joinColumn:
+                name: id_eps
+                referencedColumnName: id
+        pension:
+            targetEntity: Pension
+            inversedBy: users
+            joinColumn:
+                name: id_pension
+                referencedColumnName: id
+   
+        grupo:
+            targetEntity: Grupo
+            inversedBy: users
+            joinColumn:
+                name: rol
+                referencedColumnName: id
+    fields:
+        username:
+            type: string
+            length: '50'
+        nombre:
+            type: string
+            length: '50'
+        apellido:
+            type: string
+            length: '50'
+        numDocumento:
+            type: string
+            length: '50'
+            column: num_documento
+        email:
+            type: string
+            length: '100'
+        telefono:
+            type: string
+            length: '20'
+        salarioBasico:
+            type: integer
+            column: salario_basico
+        salt:
+            type: string
+            length: 255
+        password:
+            type: string
+            length: 255
+        isActive:
+            type: boolean
+    lifecycleCallbacks: {  }
